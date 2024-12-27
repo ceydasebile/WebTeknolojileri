@@ -1,0 +1,765 @@
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff5ff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  }
+  .logo{
+      width: 14%;
+      height: 14%;
+  }
+  #navbar{
+      display: flex;
+      align-items: center;
+        
+  }
+  #navbar li{
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+  }
+  #navbar li a{
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      color: black;
+      transition: 0.3s ease;
+  }
+  #navbar li a:hover,
+  #navbar li a.active{
+      color: #111;
+   }
+  
+  #navbar li a.active::after,
+  #navbar li a:hover::after {
+      content: "";
+      width: 40%;
+      height: 2px;
+      background-color: #088178;
+      position: absolute;
+      bottom: -4px;
+      left: 10px;
+  }
+
+
+/*Sepet İkonu (Açılır Menü Dışında)*/
+#navbar1{
+  display: flex;
+  align-items: center;
+}
+#navbar1 li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;}
+
+#navbar1 li a{
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  transition: 0.3s ease;
+}
+#navbar1 li a:hover,
+#navbar1 li a.active{
+    color: #111;
+}
+#navbar1 li a.active::after,
+#navbar1 li a:hover::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+}
+
+
+
+
+
+/* Açılır Menü */
+#header .menu-btn i{
+  color: #000000;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+  input[type="checkbox"]{
+    display: none;
+  }
+  @media (max-width: 960px){
+    #navbar{
+      padding: 0 40px 0 50px;
+    } 
+  }
+  @media (max-width: 960px) {
+    #header .menu-btn i{
+      display: block;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    #navbar{
+      position: fixed ;
+      top: 110px;
+      left: -100%;
+      background: #ffffff;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+      line-height: 23px;
+     }
+    #click:checked ~ #navbar {
+      left: 0;
+    }
+    #navbar li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    #navbar li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ #navbar a{
+      margin-left: 0px;
+    }
+   
+  }
+
+
+
+
+/* Ürünler */
+
+#Ürün1{
+    text-align: center;
+    
+}
+#Ürün1 .pro-container{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 20px;
+   flex-wrap: wrap;
+   
+}
+#Ürün1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+}
+#Ürün1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+#Ürün1 .pro img{
+   width: 100%;
+   border-radius: 20px;
+}
+#Ürün1 .pro .des{
+    text-align: center;
+    padding: 10px 0;
+}
+#Ürün1 .pro .des span{
+   color: black;
+   font-size: 25px;
+}
+#Ürün1 .pro .des h5{
+    color: #606063;
+}
+#Ürün1 .pro .des h4{
+  padding-top: 7px;
+  font-size: 20px;
+  font-weight: 700;
+
+}
+#Ürün1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #088178;
+    font-weight: 500;
+    color: white;
+    border: 2.5px solid #088178;
+}
+.text{
+    text-decoration: line-through ;
+    text-overflow: line;
+
+}
+
+
+/* Anasayfadaki Yarışma Soruları butonu*/
+#anket{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: white;
+  bottom: 0;
+
+}
+#buton1 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  margin-left: 1%;
+  margin-right: 1%;
+  border: 3px solid rgb(248, 199, 225);
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease all;
+  z-index: 1;
+  cursor: pointer;
+  width: 40%;
+}
+#buton1:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: rgb(254, 234, 244) ;
+  z-index: -1;
+}
+#buton1:hover, #buton1:focus {
+  color: white;
+}
+#buton1:hover:before, #buton1:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+#buton1:active {
+  transform: scale(0.9);
+}
+@media (max-width: 724px) { 
+  /*sitenin genişliği 724'e eşit veya daha küçükse  bu stiller işlenir*/
+ #buton1 {
+    top: 0 !important; 
+    left: 0 !important;
+    margin: 0 !important;
+    height: auto;
+    text-align: center;
+    width: 100%;
+    margin-right: 0.8%;
+    margin-left: 0.8%;
+ }
+}
+
+
+
+
+/*Footer*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ footer{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+  bottom: 0;
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #088178;
+  top: -10px;
+}
+.left .content p{
+  text-align: justify;
+}
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+.left .content .social a{
+  padding: 0 2px;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover{
+  background: #088178 ;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover{
+  background: #088178 ;
+}
+.center .content .text1{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .text1{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: rgb(255, 255, 255);
+  padding-left: 10px;
+  border: 1px solid #222222;
+  
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #088178 ;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn{
+  margin-top: 10px;
+}
+.right form .btn button{
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  float: right;
+  background: #088178;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.right form .btn button:hover{
+  background: #075c56;
+}
+.bottom span{
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
+
+
+
+/*İletişim Sayfası*/
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.iletişim{
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.contact-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info{
+  color: black;
+  max-width: 500px;
+  line-height: 65px;
+  padding-left: 50px;
+  font-size: 18px;
+}
+
+.contact-info i{
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.contact-form{
+  max-width: 700px;
+  margin-right: 50px;
+}
+
+.contact-info, .contact-form{
+  flex: 1;
+}
+
+.contact-form h2{
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact-form .text-box{
+  background: #000;
+  color: #fff;
+  border: none;
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+  outline-color: #088178;
+}
+
+.contact-form .text-box:first-child{
+  margin-right: 15px;
+}
+
+.contact-form textarea{
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: vertical;
+  border-radius: 5px;
+  outline-color: #088178;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .send-btn{
+  float: right;
+  background: #088178;
+  color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form .send-btn:hover{
+  background: #075c56;
+}
+
+@media screen and (max-width: 950px){
+  .contact-section{
+    flex-direction: column;
+  }
+
+  .contact-info, .contact-form{
+    margin: 30px 50px;
+  }
+
+  .contact-form h2{
+    font-size: 30px;
+  }
+
+  .contact-form .text-box{
+    width: 100%;
+  }
+}
+
+/*css for alert messages*/
+
+.alert-success{
+  z-index: 1;
+  background: #D4EDDA;
+  font-size: 18px;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: fixed;
+  right: 0;
+  top: 10px;
+  border-left: 8px solid #3AD66E;
+  border-radius: 4px;
+}
+
+.alert-error{
+  z-index: 1;
+  background: #FFF3CD;
+  font-size: 18px;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: fixed;
+  right: 0;
+  top: 10px;
+  border-left: 8px solid #FFA502;
+  border-radius: 4px;
+}
+      
+
+
+
+
+/*Yarışma Sorularındaki Form*/
+
+#user-info-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color:#f9f9f9 ;
+}
+
+#user-info-form label,
+#user-info-form input,
+#user-info-form textarea,
+#user-info-form button {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#user-info-form input[type="text"],
+#user-info-form input[type="tel"],
+#user-info-form textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#user-info-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#user-info-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Duyarlılık eklemeleri */
+/* Küçük ekranlar için genişliği tam yap */
+@media screen and (max-width: 600px) {
+  #user-info-form {
+    max-width: 100%;
+  }
+
+  /* Küçük ekranlar için elemanların arasındaki boşluğu azalt */
+  #user-info-form label,
+  #user-info-form input,
+  #user-info-form textarea,
+  #user-info-form button {
+    margin-bottom: 10px;
+  }
+
+  /* Küçük ekranlar için metin ve telefon giriş alanlarına daha küçük padding */
+  #user-info-form input[type="text"],
+  #user-info-form input[type="tel"],
+  #user-info-form textarea {
+    padding: 6px;
+  }
+
+  /* Küçük ekranlar için gönder butonuna daha küçük padding */
+  #user-info-form button {
+    padding: 8px;
+  }
+}
+
+
+
+
+
+/* Hakkımızda sayfası linkler */
+
+.link-container {
+  margin-bottom: 20px;
+}
+
+.link-item {
+  margin-bottom: 10px;
+}
+
+/* Responsive tasarım */
+@media screen and (max-width: 600px) {
+  .link-container {
+      text-align: center;
+  }
+
+  .link-item {
+      display: block;
+      margin: 0 auto;
+  }
+}
+
+
+
+
+
+/* Karanlık Mod , Aydınlık Mod */
+
+/* Yeni eklenen dark-mode sınıfı */
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Dark mode toggle butonunun stilini güncelleme */
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+  color: #222; /* Butonun rengi */
+  position: fixed;
+  top: 10px; 
+  right: 10px; 
+  z-index: 1000;
+}
+
+/* Dark mode'da "pro" sınıfındaki (Ürünleri) yazıları ve rakamları beyaz yapma */
+.dark-mode .pro span,
+.dark-mode .pro .bi-star-fill,
+.dark-mode .pro .text1,
+.dark-mode .pro .fs-4,
+.dark-mode .pro .fs-5 {
+  color: white !important; /* Yazı ve rakam rengi beyaz  */
+}
+
+/* Karanlık Moda Geçtiğinde Yarışma Soruları Butonunun renk özelliklerini değiştirme */
+
+/* Karanlık mod için özel renkler */
+.dark-mode #buton1 {
+  color: white; /* Buton metin rengi */
+  border-color: #cce7d0; /* Buton kenarlık rengi */
+}
+
+.dark-mode #buton1:before {
+  background-color: #cce7d0; /* Buton öncesi arka plan rengi */
+}
+
+.dark-mode #buton1:hover, .dark-mode #buton1:focus {
+  background-color: #cce7d0; /* Buton üzerine gelindiğinde arka plan rengi */
+  color: white; /* Buton metin rengi */
+}
+
+
+
+
+/* Scrollbar rengi ve boyutunu değiştirme */
+body::-webkit-scrollbar{
+width: 11px;
+}
+body::-webkit-scrollbar-thumb{
+background:#088178 ;
+border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
